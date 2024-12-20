@@ -117,13 +117,6 @@ spec:
                   key: {{ .secretPasswordKey }}
             {{- end }}
             {{- end }}
-            {{- if and (eq .Values.dataStoreType "postgres") .Values.postgresConfig.data.passwordSecretName .Values.postgresConfig.data.passwordSecretKey }}
-            - name: POSTGRESQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Values.postgresConfig.data.passwordSecretName }}
-                  key: {{ .Values.postgresConfig.data.passwordSecretKey }}
-            {{- end }}
           volumeMounts:
             - name: job-config
               mountPath: /etc/config-bootstrapper/application.conf
