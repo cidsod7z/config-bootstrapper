@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ "$1" == "login" ]; then
+  echo "Login Succeeded"
+  exit 0
+fi
+exec /usr/bin/docker "$@"

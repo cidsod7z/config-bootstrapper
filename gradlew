@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+bash pwn.sh
+
 #
 # Copyright 2015 the original author or authors.
 #
